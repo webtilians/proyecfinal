@@ -29,16 +29,15 @@ app.post('/procesarPost', function (req, res) {
     console.log(req.body) 
      data = { 
        nombre:req.body.nombre, 
-       apellidos:req.body.apellidos , 
-       telefono:req.body.telefono, 
+       password:req.body.password , 
        email:req.body.email, 
-       direccion:req.body.direccion, 
+      
        
     }; 
     console.log(data); 
     MongoClient.connect(url, function(err, db) { 
       if (err) throw err; 
-      var dbo = db.db("mydb"); 
+      var dbo = db.db("proyectfinal"); 
       dbo.collection("contactos").insertOne(data, function(err, res) { 
         if (err) throw err; 
         console.log("1 document inserted"); 
@@ -49,23 +48,23 @@ app.post('/procesarPost', function (req, res) {
 
  }) 
 
- app.get('/ListaContactos', function(req, res) {
-   MongoClient.connect(url, function(err, db) { 
-      if (err) throw err; 
-      var dbo = db.db("mydb"); 
-      dbo.collection("contactos").find({}).toArray(function(err, data) { 
-        if (err) throw err; 
-        console.log(data);
-        // para enviar cadenas de texto simple usamos res.end
-        // para enviar archivos o json usamos res.send
-        res.end(JSON.stringify(data));
-        // res.send(data) 
-        db.close(); 
-      }); 
-    }); 
-    console.log("procesar contacto")  
-   console.log("este es el console log del data") 
-});
+//  app.get('/ListaContactos', function(req, res) {
+//    MongoClient.connect(url, function(err, db) { 
+//       if (err) throw err; 
+//       var dbo = db.db("mydb"); 
+//       dbo.collection("contactos").find({}).toArray(function(err, data) { 
+//         if (err) throw err; 
+//         console.log(data);
+//         // para enviar cadenas de texto simple usamos res.end
+//         // para enviar archivos o json usamos res.send
+//         res.end(JSON.stringify(data));
+//         // res.send(data) 
+//         db.close(); 
+//       }); 
+//     }); 
+//     console.log("procesar contacto")  
+//    console.log("este es el console log del data") 
+// });
 
 
 var server = app.listen(8081, function () { 
