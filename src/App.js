@@ -7,6 +7,7 @@ function App() {
      Edu hola
      hola enrique
      Hola soy Quique
+     hello there!
     </div>
   );
 }
