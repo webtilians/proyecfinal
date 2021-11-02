@@ -9,6 +9,7 @@ function App() {
      Hola soy Quique
      hello there!
      tira el pc por la ventana lidia
+     hola lidia
     </div>
   );
 }
