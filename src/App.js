@@ -1,16 +1,25 @@
-import logo from './logo.svg';
+// import AltaContacto from './AltaContactos';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Header from "./components/header/Header.js";
 
 function App() {
+
+  
   return (
-    <div className="App">
-     Edu hola
-     hola enrique
-     Hola soy Quique
-     hello there!
-     tira el pc por la ventana lidia
-     hola lidia
-    </div>
+    
+     <>
+     <div className="App">
+     <Router>
+       <Header/>
+       
+       <Switch>
+       </Switch>
+      
+      </Router>
+      </div>
+     </>
+   
   );
 }
 
