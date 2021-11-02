@@ -2,7 +2,7 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from "./components/header/Header";
-import AltaUsuario from "./components/loggin/AltaUsuario";
+import AltaUsuario from "./components/loggin/altaUsuario";
 import Loggin from "./components/loggin/Loggin";
 
 
