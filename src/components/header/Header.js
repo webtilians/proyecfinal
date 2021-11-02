@@ -8,7 +8,7 @@ function Header(props) {
         <>
         <div className="App">
         <Link to="/AltaUsuario"><button>Alta Usuario</button></Link>
-        {/* <Link to="/loggin"><button>Iniciar Sesión</button></Link> */}
+        <Link to="/loggin"><button>Iniciar Sesión</button></Link>
        
         </div>    
         </>

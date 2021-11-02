@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from "./components/header/Header";
 import AltaUsuario from "./components/loggin/AltaUsuario";
+import Loggin from "./components/loggin/Loggin";
 
 
 function App() {
@@ -18,9 +19,9 @@ function App() {
        <Route  path="/AltaUsuario">
         <AltaUsuario/>
        </Route>
-       {/* <Route path="/Loggin">
+       <Route path="/Loggin">
         <Loggin/>
-       </Route> */}
+       </Route>
       </Switch>
       
       </Router>
