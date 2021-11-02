@@ -6,6 +6,7 @@ function App() {
     <div className="App">
      Edu hola
      hola enrique
+     Hola soy Quique
     </div>
   );
 }
